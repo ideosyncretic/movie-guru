@@ -1,0 +1,54 @@
+html, body {
+  font-family: Montserrat;
+  font-size: 22px;
+  background-color: black;
+  color: ghostwhite;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.bg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.tint {
+  background-color: rgba(0,0,0,.7);
+  background-blend-mode: multiply;
+}
+
+input {
+  border-radius: 50px;
+  outline: none;
+  shadow: none;
+  border: none;
+  padding: 10px;
+  font-family: Montserrat;
+  font-size: 20px;
+  height: 30px;
+}
+
+input#term {
+  background-color: ghostwhite;
+  width: 300px;
+}
+
+input#search {
+  background-color: lightgreen;
+  width: 100px;
+  display: none;
+}
+
+#landscape {
+  width: 200px;
+  height:auto;
+}
