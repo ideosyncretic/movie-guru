@@ -1,16 +1,55 @@
 html, body {
   font-family: Montserrat;
   font-size: 22px;
-  background-color: black;
   color: ghostwhite;
+  background-color: black;
+  padding: 0;
+  margin: 0;
 }
 
-.container {
+h2 {
+  font-weight: 400;
+}
+
+.col {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.container {
   height: 100vh;
   width: 100vw;
+}
+
+nav {
+  background-color: midnightblue;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  padding: 5px;
+}
+
+input {
+  border-radius: 10px;
+  outline: none;
+  shadow: none;
+  border: none;
+  padding: 10px;
+  font-family: Montserrat;
+  font-size: 16px;
+  height: 20px;
+}
+
+input#term {
+  background-color: ghostwhite;
+  width: 300px;
+}
+
+input#search {
+  background-color: white;
+  width: 100px;
+  height: 40px;
 }
 
 .bg {
@@ -26,26 +65,15 @@ html, body {
   background-blend-mode: multiply;
 }
 
-input {
-  border-radius: 50px;
-  outline: none;
-  shadow: none;
-  border: none;
-  padding: 10px;
-  font-family: Montserrat;
-  font-size: 20px;
-  height: 30px;
+.content {
+  display: flex;
+  flex: 12;
+  padding: 60px 50px;
 }
 
-input#term {
-  background-color: ghostwhite;
-  width: 300px;
-}
-
-input#search {
-  background-color: lightgreen;
-  width: 100px;
-  display: none;
+.poster {
+  display: flex;
+  flex: 2;
 }
 
 #landscape {

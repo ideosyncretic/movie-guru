@@ -15,6 +15,7 @@ $(document).ready(function(){
     $.ajax(q.url + q.mode + q.query + input + q.key, {
       success: function (result) {
         $('#poster').html('');
+        $('#details').html('<h1>' + result.results[0].title + '</h1>' + '<h2>(' + result.results[0].release_date.substring(0,4) + ')</h2>');
         $('<img>').attr('id', 'main').attr('src', q.poster + result.results[0].poster_path).appendTo('#poster');
 
         $.getJSON(q.url + 'movie/' + result.results[0].id + '/images?' + q.key, function (result) {
@@ -24,7 +25,17 @@ $(document).ready(function(){
           $('.bg').css('background-image', 'url(' + q.landscape + result.backdrops[0].file_path + ')');
           }
         });  // end images getJSON
-      } // end success
+      }, // end success
+      error: function (request, errorType, errorMessage) {
+        alert('Error: ' + errorType + ', ' + errorMessage + ' :(');
+      },
+      timeout: 3000,
+      beforeSend: function () {
+        $('#search').attr('value', 'loading...');
+      },
+      complete: function () {
+        $('#search').attr('value', 'Go!');
+      }
     });  // end poster getJSON
   }); // end submit event
 
