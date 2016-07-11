@@ -7,7 +7,7 @@ $(document).ready(function(){
     mode: 'search/movie',
     query: '?query=',
     key: '&api_key=a00b1e93ae8d3a423385de614ad8cf5b'
-  }
+  };
 
   $('#form').on('submit', function (event) {
     event.preventDefault();
