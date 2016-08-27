@@ -14,7 +14,12 @@ h2 {
 .col {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  padding: 30px;
+}
+
+.row {
+  display: flex;
+  padding: 30px;
 }
 
 .container {
@@ -23,7 +28,7 @@ h2 {
 }
 
 nav {
-  background-color: midnightblue;
+  background-color: black;
   width: 100%;
   position: fixed;
   top: 0;

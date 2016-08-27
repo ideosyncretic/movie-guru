@@ -15,12 +15,13 @@ $(document).ready(function(){
     $.ajax(q.url + q.mode + q.query + input + q.key, {
       success: function (result) {
         $('#poster').html('');
-        $('#details').html('<h1>' + result.results[0].title + '</h1>' + '<h2>(' + result.results[0].release_date.substring(0,4) + ')</h2>');
+        $('#header').html('<h1>' + result.results[0].title + '</h1>' + '<h2>(' + result.results[0].release_date.substring(0,4) + ')</h2>');
+        $('#overview').html('<p>' + result.results[0].overview + '</p>');
         $('<img>').attr('id', 'main').attr('src', q.poster + result.results[0].poster_path).appendTo('#poster');
 
         $.getJSON(q.url + 'movie/' + result.results[0].id + '/images?' + q.key, function (result) {
           $('#images').html('');
-          for (var i = 1; i < 6; i++) {
+          for (var i = 1; i < 7; i++) {
           $('<img>').attr('id', 'landscape').attr('src', q.landscape + result.backdrops[i].file_path).appendTo('#images');
           $('.bg').css('background-image', 'url(' + q.landscape + result.backdrops[0].file_path + ')');
           }
